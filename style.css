@@ -1,0 +1,351 @@
+:root{
+    --font-family: 'Bai Jamjuree', sans-serif;
+    --clr-primary-100: hsl(171, 66%, 44%);
+    --clr-primary-200: hsl(233, 100%, 69%);
+    --clr-neutral-100: hsl(210, 10%, 33%);
+    --clr-neutral-200: hsl(201, 11%, 66%);
+    --fw-normal: 400;
+    --fw-semi-bold: 600;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    color: var(--clr-neutral-200);
+    font-size: 1.15rem;
+}
+
+body{
+    font-family: var(--font-family);
+}
+
+h1{
+    font-size: clamp(3rem, 2vw , 1rem);
+}
+
+h2{
+    font-size: clamp(2.5rem, 2vw , 1rem);
+}
+
+h4{
+    font-size: clamp(1.8rem, 1.2vw , 1rem);
+}
+
+h1,h2,h4{
+    color: var(--clr-neutral-100);
+}
+
+.nav-bar{
+    text-align: center;
+    /* display: grid;
+    place-content: center; */
+}
+
+.header-container,.pros{
+    display: grid;
+    /* place-items: center; */
+    gap: 1.5rem; 
+    /* text-align: center;    */
+}
+
+.button-container{
+    display: grid;
+    /* place-items: center; */
+    gap: 1rem;
+}
+
+body{
+    background-image: url(/images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    gap: 10rem;
+}
+
+section{
+    margin-inline: 2.2rem;
+}
+
+button{
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    border: none;
+    color: #fff;
+    font-size: 1.125rem;
+}
+
+.ios-button{
+    background-color: var(--clr-primary-100);
+    box-shadow: 0px 3px 0px 0px hsl(171, 65%, 35%),0px 13px 19px 6px hsla(171, 66%, 44%, 0.2);
+}
+
+.ios-button:hover{
+    background-color: hsl(171, 83%, 47%);
+    cursor: pointer;
+}
+
+.mac-button{
+    background-color: var(--clr-primary-200);
+    box-shadow: 0px 3px 0px 0px hsl(233, 74%, 59%),0px 13px 19px 6px rgba(0,0,0,0.12);
+}
+
+.mac-button:hover{
+    background-color: hsl(233, 93%, 77%);
+    cursor: pointer;
+}
+
+
+.pros-list,.clipboard-pros,.pros{
+    display: grid;
+    text-align: center;
+}
+
+.pros-list{
+    gap: 4rem;
+}
+
+.icons-section{
+    text-align: center;
+    display: grid;
+    gap: 4rem;
+}
+
+body,
+.workflow-section,
+.workflow-specs,
+.snippet-section,
+.clipboard-section,
+.hero-section,
+.ios-section,
+.header,
+.pc-container{
+    display: grid;
+    text-align: center;
+}
+
+.ios-section,
+.clipboard-section,
+.pc-container{
+    gap: 3rem;
+}
+
+.snippet-section,
+.hero-section{
+    gap: 3.5rem;
+}
+
+.workflow-specs{
+    gap: 4rem;
+}
+
+.workflow-spec{
+    display: grid;
+    gap: 3rem;
+}
+
+.workflow-spec-info{
+    display: grid;
+    gap: 2rem;
+}
+
+.header{
+    gap: 4rem;
+}
+
+.footer-nav-list{
+    gap: 1.5rem;
+    display: grid;
+}
+
+.nav-links{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.nav-link:hover{
+    color: var(--clr-primary-100);
+    cursor: pointer;
+}
+
+footer{
+    background-color: hsla(210, 3%, 85%, 0.473);
+    padding: 2.5rem 0;
+}
+
+.footer-logo{
+    width: clamp(25%, 2rem, 5% );
+}
+
+.footer-nav{
+    /* background-color: var(--clr-neutral-200); */
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 2.5rem;
+}
+
+.footer-socials{
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+}
+
+.footer-icon svg{
+    /* fill="#4C545C" */
+    fill: #4C545C;
+    transition: fill 0.3s;
+}
+
+.footer-icon:hover svg{
+    cursor: pointer;
+    fill: var(--clr-primary-100);
+}
+
+@media (width <= 599px) {
+    body{
+        margin-top: 5rem;
+
+    }
+    .workflow-specs{
+        padding-top: 5.5rem;
+    }
+    
+}
+
+@media (width >= 600px) {
+
+    body{
+        background-image: url(/images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        display: grid;
+        gap: 8rem;
+    }
+    
+    .header-container{
+        padding: 0;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .header{
+        padding-top: 6rem;
+    }
+    
+    .main-header{
+        margin: 0 auto;
+        width: 55%;
+        /* background-color: aqua; */
+    }
+
+    .button-container{
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .workflow-specs,
+    .icons-section{
+        display: flex;
+        margin: 0 auto;
+        width: 85%;
+    }
+
+    .icons-section{
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .image-container{
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    
+    .ios-section,
+    .header{
+        gap: 3rem;
+    }
+
+    .pc-container{
+        display: flex;
+        gap: 5rem;
+    }
+
+    .pc-image{
+        width: 60%;
+        position: relative;
+        right: 5%;
+
+    }
+
+    .clipboard-pros{
+        margin: 0 auto;
+        align-items: center;
+        justify-content: end;
+
+    }
+
+    .pros-list{
+        justify-content: end;
+        /* width: 70%; */
+    }
+
+    .pros{
+        text-align: start;
+
+        width: 60%;
+        gap: 1.5rem;
+    }
+
+    .workflow-section,
+    .snippet-section,
+    .clipboard-section{
+        gap: 5rem;
+    }
+
+    .workflow-specs{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+        align-items: baseline;
+    }
+
+    .footer-logo{
+        /* width: 25%; */
+    }
+
+    .footer-nav{
+        grid-template-columns: 1fr 3fr 1fr;
+        margin: 0 auto;
+        width: 85%;
+        align-items: center;
+    }
+
+    .nav-links{
+        gap: 1rem;
+    }
+
+    .footer-nav-list{
+        display: flex;
+        gap: 6rem;
+        text-align: start;
+        
+    }
+
+    .footer-socials{
+        gap: 1.5rem;
+    }
+
+    
+}
